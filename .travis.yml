@@ -15,7 +15,7 @@ after_success:
   - docker build -t lvl39/multi-worker ./worker
 
   # Log in to the docker CLI
-  - echo "$DOCKER_PASSWROD" | docker login -u "$DOCKER_ID" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
   # Take those images and push them to docker hub
   - docker push lvl39/multi-client
